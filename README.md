@@ -1,22 +1,10 @@
-<img src="https://socsportal.cit.ie/assets/images/logowhite.jpg" alt="CIT Logo" width="25%" />
+<img src="https://socsportal.cit.ie/assets/images/logowhite.jpg" alt="Cork Institute of Technology" width="25%" />
 
-#### Cork Institute of Technology
-
-##### CR106 - BSc Honours Software Development
-
-##### 2020-21 Academic Year (Year 1 Semester 1)
-
----
+#### CR106 - BSc Honours Software Development
 
 # SOFT6018 - Programming Fundamentals Project
 
-Worth: 30%
-
-**Due Date:**: Sunday 13th December @ 23:59
-
 ## Blackwater Annual Concert
-
----
 
 Write a program that helps organise the Blackwater Annual Concert.
 
@@ -181,8 +169,6 @@ Blackwater Annual Music Concert
 
 ## Project Development Guidelines
 
----
-
 ### 1. Implementing the Menu
 
 **Step 1.1**
@@ -244,21 +230,20 @@ Blackwater Annual Music Concert
 ### Implementing Option 2 Generating Concert Schedule
 
 **Step 3.1**
-• Open the file for reading
-• Read each line of the file and print to screen
-• Number each line shown
-• Close the file
+
+-   Open the file for reading
+-   Read each line of the file and print to screen
+-   Number each line shown
+-   Close the file
 
 **Step 3.2**
-• Extract the details of each line into an array
-• Print all the elements of the array to the screen
+
+-   Extract the details of each line into an array
+-   Print all the elements of the array to the screen
 
 **Step 3.2**
-• Modify so the duration of a performance is stored as an int
-• Add an if statement so a \* appears after the name if duration > 15
 
----
-
-#### SOFT6018 - Programming Fundamentals
+-   Modify so the duration of a performance is stored as an int
+-   Add an if statement so a `*` appears after the name if duration > 15
 
 ##### Patrik Richard Szilagyi, 2020
