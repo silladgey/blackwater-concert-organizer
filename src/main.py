@@ -21,7 +21,7 @@ while True:
         # Code to execute when 1st option is selected
         if selected == 1:
             # Open performer.txt file to append to it
-            performance_file = open("performer.txt", "a")
+            performance_file = open("data/performer.txt", "a")
 
             # Option 1 Heading
             print("\n(1) Adding Performers")
@@ -174,7 +174,7 @@ while True:
             print("-" * 20)
 
             # Open performer.txt to read
-            with open("performer.txt") as concert_details:
+            with open("data/performer.txt") as concert_details:
                 # Iterator
                 i = 0
 
