@@ -3,11 +3,13 @@
 #   Description: SOFT6018 Project 2020 - BLACKWATER ANNUAL CONCERT
 
 # Main menu
-MENU = "Blackwater Annual Music Concert\n" \
-       "-------------------------------\n" \
-       "1. Adding Performers\n" \
-       "2. Generate Concert Details\n" \
-       "3. Quit"
+MENU = (
+    "Blackwater Annual Music Concert\n"
+    "-------------------------------\n"
+    "1. Adding Performers\n"
+    "2. Generate Concert Details\n"
+    "3. Quit"
+)
 print(MENU)
 
 # Start of infinite while loop
@@ -28,11 +30,15 @@ while True:
             # Try to get a valid input for the number of performers, otherwise display an error and ask for input again
             while True:
                 try:
-                    num_of_performers = int(input("How many performers are you adding? "))
+                    num_of_performers = int(
+                        input("How many performers are you adding? ")
+                    )
                     break
                 except ValueError:
                     num_of_performers = 0
-                    print("[ERR1] INVALID INPUT! Use integers to add the amount of performers.\n")
+                    print(
+                        "[ERR1] INVALID INPUT! Use integers to add the amount of performers.\n"
+                    )
             # End of while loop
 
             # Code to execute when the number of performers are greater than 0 (valid input is provided)
@@ -60,11 +66,15 @@ while True:
                     # Keep looping until valid input is given by user for the performance type
                     while True:
                         try:
-                            performance_type_num = int(input("Type of Performance:\n"
-                                                             "\t1. Musical\n"
-                                                             "\t2. Singer\n"
-                                                             "\t3. Dance\n"
-                                                             "==> "))
+                            performance_type_num = int(
+                                input(
+                                    "Type of Performance:\n"
+                                    "\t1. Musical\n"
+                                    "\t2. Singer\n"
+                                    "\t3. Dance\n"
+                                    "==> "
+                                )
+                            )
                             # Get the type of performance
                             if performance_type_num == 1:
                                 performance_type = "Musician"
@@ -80,10 +90,14 @@ while True:
                                 break
                             else:
                                 performance_type = ""
-                                print("[ERR2] INVALID INPUT! Please select from a valid option (1-3).\n")
+                                print(
+                                    "[ERR2] INVALID INPUT! Please select from a valid option (1-3).\n"
+                                )
                             # End of if-else statement
                         except ValueError:
-                            print("[ERR3] INVALID INPUT! Use integers to select from a valid option (1-3).\n")
+                            print(
+                                "[ERR3] INVALID INPUT! Use integers to select from a valid option (1-3).\n"
+                            )
                     # End of while loop
                     # Keep looping until valid input is given by user for the performance length
                     while True:
@@ -96,12 +110,16 @@ while True:
                                     break
                                 else:
                                     performance_length = 0
-                                    print("[ERR4] INVALID INPUT! Value for time on stage must be greater than 0.\n")
+                                    print(
+                                        "[ERR4] INVALID INPUT! Value for time on stage must be greater than 0.\n"
+                                    )
                                 # End of if-else statement
                             # End of while loop
                             break
                         except ValueError:
-                            print("[ERR5] INVALID INPUT! Use integers to set time in minutes.\n")
+                            print(
+                                "[ERR5] INVALID INPUT! Use integers to set time in minutes.\n"
+                            )
                     # End of while loop
                     # End of inputs
 
@@ -120,23 +138,28 @@ while True:
                     performance_details += f"\n{i}. {performer}"
 
                     # Add performer details to performer.txt file
-                    print(f"{surname} {firstname} {performance_type} {performance_length}", file=performance_file)
+                    print(
+                        f"{surname} {firstname} {performance_type} {performance_length}",
+                        file=performance_file,
+                    )
                 # End of for loop
 
                 # Close performance.txt file
                 performance_file.close()
 
                 # Output of option 1
-                print(f"\nThe following information has been added."
-                      f"\n{performance_details}\n"
-                      f"\nSummary Notes:\n"
-                      f"--------------\n"
-                      f"{num_of_musicians} Musician(s)\n"
-                      f"{num_of_singers} Singer(s)\n"
-                      f"{num_of_dancers} Dancer(s)\n"
-                      f"Total time required: {hours} hour(s), {minutes} min(s)\n"
-                      f"The longest act added is {longest_act}.\n"
-                      f"\n{MENU}")
+                print(
+                    f"\nThe following information has been added."
+                    f"\n{performance_details}\n"
+                    f"\nSummary Notes:\n"
+                    f"--------------\n"
+                    f"{num_of_musicians} Musician(s)\n"
+                    f"{num_of_singers} Singer(s)\n"
+                    f"{num_of_dancers} Dancer(s)\n"
+                    f"Total time required: {hours} hour(s), {minutes} min(s)\n"
+                    f"The longest act added is {longest_act}.\n"
+                    f"\n{MENU}"
+                )
 
             # Code to execute when no valid input is given for number of performers (<0)
             else:
@@ -176,7 +199,8 @@ while True:
 
                     # Output of option 2
                     print(
-                        f"{i}: {perform_firstname} {perform_surname}{indicator}\t\t({perform_type})\t{perform_length} minutes")
+                        f"{i}: {perform_firstname} {perform_surname}{indicator}\t\t({perform_type})\t{perform_length} minutes"
+                    )
                 # End of for loop
             # End of file operations
 
@@ -194,12 +218,16 @@ while True:
 
         # Code to execute when no valid option is selected (ask the user for input again)
         else:
-            print("[ERR6] INVALID INPUT! Please select from a valid option (1-3).\n"
-                  f"\n{MENU}")
+            print(
+                "[ERR6] INVALID INPUT! Please select from a valid option (1-3).\n"
+                f"\n{MENU}"
+            )
         # End of elif statements
 
     # When an error is detected ask the user for input again
     except ValueError:
-        print("[ERR7] INVALID INPUT! Use integers to select from a valid option (1-3).\n"
-              f"\n{MENU}")
+        print(
+            "[ERR7] INVALID INPUT! Use integers to select from a valid option (1-3).\n"
+            f"\n{MENU}"
+        )
 # End of infinite while loop
